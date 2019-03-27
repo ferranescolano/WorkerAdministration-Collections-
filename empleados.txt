@@ -1,0 +1,2 @@
+usu1,123ferran,escolano,21/12/2009,Barcelona,Informatica
+usu2,123,diego,cisneros,12/12/2012,Barcelona,Marketing

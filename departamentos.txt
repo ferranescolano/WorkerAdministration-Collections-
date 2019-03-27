@@ -1,0 +1,2 @@
+Informatica,40,Alberto
+Marketing,100,Monica
