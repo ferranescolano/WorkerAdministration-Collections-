@@ -1,2 +1,2 @@
-Informatica,Urgente,La placa base no funciona,03/01/2010 21:32:27,false
-Marketing,Normal,Ha saltado el CopyRight de las imagenes,27/05/2019 21:15:15,false
+Informatica,Urgente,La placa base no funciona,24/02/2019,false
+Marketing,Normal,Ha saltado el CopyRight de las imagenes,27/05/2019,false 	

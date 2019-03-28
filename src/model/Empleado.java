@@ -1,8 +1,6 @@
 
 package model;
 
-import java.util.Date;
-
 public class Empleado {
 
  
@@ -10,7 +8,7 @@ public class Empleado {
     private String password;
     private String nombre;
     private String apellidos;
-    private Date fechaContratacion;
+    private String fechaContratacion;
     private String ciudadResidencia;
     private Departamento departamento;
     
@@ -19,9 +17,7 @@ public class Empleado {
         
     }
     
-    
-    
-       public Empleado(String usuario, String password, String nombre, String apellidos, Date fechaContratacion, String ciudadResidencia, Departamento departamento) {
+       public Empleado(String usuario, String password, String nombre, String apellidos, String fechaContratacion, String ciudadResidencia, Departamento departamento) {
         this.usuario = usuario;
         this.password = password;
         this.nombre = nombre;
@@ -67,11 +63,11 @@ public class Empleado {
         this.apellidos = apellidos;
     }
 
-    public Date getFechaContratacion() {
+    public String getFechaContratacion() {
         return fechaContratacion;
     }
 
-    public void setFechaContratacion(Date fechaContratacion) {
+    public void setFechaContratacion(String fechaContratacion) {
         this.fechaContratacion = fechaContratacion;
     }
 
