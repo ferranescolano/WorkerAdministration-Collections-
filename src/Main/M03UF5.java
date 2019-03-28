@@ -27,13 +27,13 @@ public class M03UF5 {
         try {
          
             MainMenu();
-            int opcion = 0;
+            int opcion = pedirEntero("Elige una opción");
 
             switch (opcion) {
 
                 case 1:
                     adminMenu();
-
+                    
                     break;
 
                 case 2:
@@ -41,7 +41,7 @@ public class M03UF5 {
                     break;
 
                 case 3:
-
+                    LoginUser();
                     break;
             }
 
@@ -67,8 +67,13 @@ public class M03UF5 {
         System.out.println("[2] Entrar como Gerente");
         System.out.println("[3] Entrar como usuario");
     }
-
-    public static void adminMenu() {
+    public static void userMenu(){
+        System.out.println("[1] Crear Usuario");
+        System.out.println("[2] Crear Departamento");
+        System.out.println("[3] Modificar datos de Usuario");
+        System.out.println("[4] Eliminar Usuario");
+    }
+    public static void adminMenu() throws IOException {
 
         System.out.println("[1] Crear Usuario");
         System.out.println("[2] Crear Departamento");
@@ -81,7 +86,7 @@ public class M03UF5 {
         switch (opcion) {
 
             case 1:
-
+                createEmpleado();
                 break;
             case 2:
 
@@ -107,8 +112,34 @@ public class M03UF5 {
 
     }
 
+    
+    
 
-
+    public static void createEmpleado() throws IOException{
+        
+        String usuario = pedirCadena("Insertar su nombre de usuario");
+        String password = pedirCadena("Insertar password");
+        String nombre = pedirCadena("Insertar nonmbre");
+        String apellidos = pedirCadena("Inserta sus apellidos");
+        String ciudad = pedirCadena("Inserta su ciudad de residencia");
+        String departamento = pedirCadena("Insertar su departamento");
+        
+        FileManager.crearEmpleado(usuario, password, nombre, apellidos, ciudad, departamento);
+        
+    }
+    
+    public void createDepartamento(){
+        
+        String nombre = pedirCadena("Inserta el nombre del departamento");
+        int capacidad=  pedirEntero("Inserta su capacidad Máxima");
+        String gerente = pedirCadena("Inserta el nombre del gerente a cargo");
+        
+        FileManager.crearDepartamento(nombre, capacidad, gerente);
+       
+    }
+    
+    
+    
     public static int pedirEntero(String texto) {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int num = 0;
