@@ -190,13 +190,13 @@ public class FileManager {
         DateFormat df = new SimpleDateFormat(pattern);
 
         String fecha2 = df.format(fecha);
-        insertValuesIntoEmpleado(usuario, password, nombre, apellidos, fecha2, departamento);
+        insertValuesIntoEmpleado(usuario, password, nombre, apellidos, fecha2, ciudad,departamento);
 
         linkedhashsetempleado.add(e);
 
     }
 
-    public static void insertValuesIntoEmpleado(String usuario, String password, String nombre, String apellidos, String fecha2, String departamento) throws IOException {
+    public static void insertValuesIntoEmpleado(String usuario, String password, String nombre, String apellidos, String fecha2, String ciudad, String departamento) throws IOException {
 
         if (!fileEmpleados.exists()) {
             fileEmpleados.createNewFile();
@@ -216,10 +216,10 @@ public class FileManager {
         }
 
     }
-     public static void crearDepartamento(String nombre, int capacidadMax,  String gerente){
+     public static void crearDepartamento(String nombre, int capacidadMax,  String gerente) throws IOException{
         
         Departamento d = new Departamento(nombre, capacidadMax, gerente);
-        
+         insertValuesIntoDepartamento(nombre, capacidadMax, gerente);
         
     }
     
